@@ -396,14 +396,26 @@
         <use href="./images/icons.svg#icon-linkedin"></use></a></li>
      </ul>
       </div>
-      <form class="subscribe-form" name="subscribe_form">
+      <div class="subscribe">
+        <p class="soc-description">Subscribe</p>
+        <form class="subscribe-form" name="subscribe_form">
         <label for="mail"></label>
-        <input type="email" class="user-mail" name="user_mail">
-        <label for="phone"></label>
-        <input type="email" class="user-mail" name="user_phone">
+        <input type="email" class="user-mail" name="user_mail" placeholder="E-mail">
+        <button type="submit" class="subscribe-btn" method="post">Subscribe 
+
+          <svg class="icon-subscribe">
+          <use href="./images/icons.svg#icon-icon_send"></use>
+
+        </svg>
+      </button>
+        
+     
       </form>
       </div>
+
+      </div>
     </footer>
+    <!-- modalo4ka -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="button-modal">
@@ -411,6 +423,31 @@
             <use href="./images/icons.svg#icon-close"> </use>
           </svg>
         </button>
+        <form >
+          <p>Leave your contacts and we will call you back</p>
+          <label for="user_name">Name</label>
+          <input type="text" type="user_name" id="user_name">
+           <svg class="icon-name" >
+          <use href="./images/icons.svg#icon-user_name_form"></use>
+        </svg>
+         <label for="tel">Phone</label>
+          <input type="tel" id="tel">
+           <svg class="icon-tel" >
+          <use href="./images/icons.svg#icon-phone_form"></use>
+        </svg>
+        <label for="mail">E-mail</label>
+          <input type="mail" id="mail">
+           <svg class="icon-mail" >
+          <use href="./images/icons.svg#icon-mail_form"></use>
+        </svg>
+        <label class="user_comment" for="user_comment"><span>Comment</span></label>
+        <textarea class="coment-area" name="user_comment" rows="7" placeholder="Text input"></textarea>
+
+
+
+
+        
+        </form>
       </div>
     </div>
 

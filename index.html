@@ -423,31 +423,46 @@
             <use href="./images/icons.svg#icon-close"> </use>
           </svg>
         </button>
-        <form >
-          <p>Leave your contacts and we will call you back</p>
-          <label for="user_name">Name</label>
-          <input type="text" type="user_name" id="user_name">
+        <form class="form-order">
+          <h3 class="title-callback">Leave your contacts and we will call you back</h3>
+          <div class="form-field"> <label for="user_name">Name</label>
+          <input class="name" type="text" name="user_name" id="user_name">
            <svg class="icon-name" >
           <use href="./images/icons.svg#icon-user_name_form"></use>
         </svg>
-         <label for="tel">Phone</label>
-          <input type="tel" id="tel">
+      </div>
+         
+        <div class="form-field">
+          <label for="tel">Phone</label>
+          <input type="tel" name="tel" id="tel">
            <svg class="icon-tel" >
           <use href="./images/icons.svg#icon-phone_form"></use>
-        </svg>
-        <label for="mail">E-mail</label>
-          <input type="mail" id="mail">
+        </svg></div>
+         
+        <div class="form-field"><label for="mail">E-mail</label>
+          <input type="mail" name="mail" id="mail">
            <svg class="icon-mail" >
           <use href="./images/icons.svg#icon-mail_form"></use>
-        </svg>
-        <label class="user_comment" for="user_comment"><span>Comment</span></label>
-        <textarea class="coment-area" name="user_comment" rows="7" placeholder="Text input"></textarea>
+        </svg></div>
+        
+        <div class="form-field comment"><label class="user_comment" for="user_comment"><span>Comment</span></label>
+        <textarea class="coment-area" name="user_comment" rows="7" placeholder="Text input"></textarea></div>
+        
+        <div class="form-field checkbox">
+        <input id="checkbox" type="checkbox">
+        <label for="checkbox" class="accept">
+I accept the terms and conditions of the
+  <a href="#" class="private_policy">Privacy Policy</a>
+         
+        </label>
+        </div>
 
-
+        <button class="button send">Send</button>
 
 
         
         </form>
+       
       </div>
     </div>
 

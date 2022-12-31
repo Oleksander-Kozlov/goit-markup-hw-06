@@ -843,12 +843,24 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     text-decoration: none;
+
+    transition: color var(--time-animation-normal) var(--timing-function) background-color var(--time-animation-normal) var(--timing-function);
 }
 
-/* .button-modal:hover {
-    color: #FFFFFF;
-    background: var(--Pressed-state);
-} */
+.button-modal:hover,
+.button-modal:focus {
+    color: var(--hero-text-color);
+    background-color: var(--Pressed-state);
+
+}
+
+.icon-modal {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+}
+
+
 .form-order {
 
     padding: 24px;
@@ -894,15 +906,23 @@ body {
 
 
 .form-field input {
-    position: relative;
+
     margin: 0;
     padding-left: 38px;
     padding-right: 0;
     padding-top: 11px;
     padding-bottom: 11px;
+    width: 100%;
     outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+}
+
+.tel-area {
+    position: relative;
+    display: block;
+    width: 100%;
+
 }
 
 .form-input {
@@ -939,19 +959,18 @@ body {
     margin-bottom: 16px;
 }
 
-.icon-modal {
-    width: 8px;
-    height: 8px;
-    fill: currentColor;
-}
+
 
 .form-icon {
     position: absolute;
     top: 50%;
     left: 19px;
+    transform: translateY(-50%);
+    z-index: 100;
     fill: currentColor;
     width: 18px;
     height: 24px;
+
 }
 
 .form-input:focus,

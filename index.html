@@ -427,25 +427,34 @@
           <strong class="title-callback">Leave your contacts and we will call you back</strong>
           <div class="form-field"> 
             <label for="user_name">Name</label>
+            <div class="tel-area">
             <input class="form-input" class="name" type="text" name="user_name" id="user_name">
             <svg class="form-icon icon-name" >
             <use href="./images/icons.svg#icon-user_name_form">         
              </use>
             </svg>
+            </div>  
       </div>
          
         <div class="form-field">
           <label for="tel">Phone</label>
-          <input class="form-input" type="tel" name="tel" id="tel" >
+          <div class="tel-area">
+            <input class="form-input" type="tel" name="tel" id="tel" >
            <svg class="form-icon icon-tel" >
-          <use class="phone" href="./images/icons.svg#icon-phone_form"></use>
-        </svg></div>
+            <use class="phone" href="./images/icons.svg#icon-phone_form"></use>
+            </svg>
+          </div>
+          
+        </div>
          
         <div class="form-field"><label for="mail">E-mail</label>
+          <div class="tel-area">
           <input class="form-input" type="mail" name="user_mail" id="mail">
            <svg class="form-icon icon-mail" >
           <use href="./images/icons.svg#icon-mail_form"></use>
-        </svg></div>
+        </svg>
+      </div>
+    </div>
         
         <div class="form-field comment"><label class="user_comment" for="user_comment"><span>Comment</span></label>
         <textarea class="coment-area" name="user_coment" rows="7" placeholder="Text input"></textarea></div>

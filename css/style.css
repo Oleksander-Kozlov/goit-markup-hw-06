@@ -617,7 +617,7 @@ body {
     border-radius: 50%;
 
 
-
+    background: rgba(255, 255, 255, 0.1);
     background-size: 20px;
     padding: 8px;
 
@@ -633,6 +633,7 @@ body {
 .soc-link .icon {
     width: 24px;
     height: 24px;
+
 }
 
 
@@ -658,6 +659,7 @@ body {
     background-color: var(--primery-brand);
     align-items: center;
     cursor: pointer;
+    border: 1px solid transparent;
 
     transition: box-shadow var(--time-animation-normal) var(--timing-function) background-color var(--time-animation-normal) var(--timing-function);
 
@@ -674,6 +676,7 @@ body {
     padding: 8px 16px;
     background-color: transparent;
     color: #FFFFFF;
+
 }
 
 .icon-subscribe {
@@ -843,8 +846,10 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     text-decoration: none;
+    cursor: pointer;
 
     transition: color var(--time-animation-normal) var(--timing-function) background-color var(--time-animation-normal) var(--timing-function);
+
 }
 
 .button-modal:hover,

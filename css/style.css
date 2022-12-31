@@ -61,7 +61,6 @@ body {
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 3px solid var(--border-color);
-    /* box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08); */
 }
 
 .main-nav {
@@ -109,14 +108,6 @@ body {
     margin-left: 77px;
 }
 
-
-/* .site-nav .item+.item {
-     margin-left: 40px; 
-} */
-
-/* .site-nav .item:last-child {
-    margin-right: 0;
-} */
 .site-nav .item:not(:last-child) {
     margin-right: 40px;
 }
@@ -206,7 +197,7 @@ body {
 
     text-align: center;
     max-width: 1440px;
-    min-height: 603;
+    min-height: 603px;
     margin: auto;
     padding-top: 192px;
     padding-bottom: 192px;
@@ -257,12 +248,18 @@ body {
 }
 
 .button.primery:hover,
-.button.primery:focus {
+.button.primery:focus,
+.button.send:hover,
+.button.send:focus,
+.subscribe-btn:hover,
+.subscribe-btn:focus {
     box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 
-.button.primery:active {
+.button.primery:active,
+.button.send:active,
+.subscribe-btn:active {
     background-color: var(--Pressed-state);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -638,33 +635,9 @@ body {
     height: 24px;
 }
 
-/* .linkedin {
-    drop-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-} */
-
-/* .insta {
-    background-image: url(../images/instagram-2.svg);
-}
-
-.twit {
-    background-image: url(../images/twitter-footer1.svg);
-}
-
-.fb {
-    background-image: url(../images/facebook-footer-1.svg);
-}
-
-.linkedin {
-    background-image: url(../images/linkedin-footer-1.svg);
-} 
-
-/* .soc-list .item:nth-child(4n) {
-    margin: 0;
-    background-color: tomato; 
- } */
 
 /* Subscrribe */
-.subscribe {}
+
 
 .subscribe-form {
     display: flex;
@@ -684,9 +657,14 @@ body {
     color: var(--hero-text-color);
     background-color: var(--primery-brand);
     align-items: center;
+    cursor: pointer;
+
+    transition: box-shadow var(--time-animation-normal) var(--timing-function) background-color var(--time-animation-normal) var(--timing-function);
+
+
 }
 
-.user-mail {
+.subscribe-mail {
     width: 264px;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -878,21 +856,26 @@ body {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
-    text-align: center;
+    text-align: left;
 
 }
 
 .title-callback {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 14px;
+
+
 }
 
 .form-field {
     position: relative;
-    outline: 1px solid tomato;
+
     margin-bottom: 8px;
     display: flex;
     flex-direction: column;
@@ -917,12 +900,16 @@ body {
     padding-right: 0;
     padding-top: 11px;
     padding-bottom: 11px;
-
+    outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
 
-.form-field textarea {
+.form-input {
+    transition: color var(--time-animation-normal) var(--timing-function);
+}
+
+.form-field .coment-area {
     padding-right: 16px;
     padding-left: 16px;
     padding-top: 8px;
@@ -933,6 +920,10 @@ body {
     line-height: calc(16/12);
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
+    outline: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: color 5s var(--timing-function);
 }
 
 .form-field textarea::placeholder {
@@ -954,51 +945,80 @@ body {
     fill: currentColor;
 }
 
-.icon-name {
+.form-icon {
     position: absolute;
-    top: 35px;
+    top: 50%;
     left: 19px;
-    transform-origin: 1;
-    z-index: 100;
-
-    width: 12px;
-    height: 12px;
+    fill: currentColor;
+    width: 18px;
+    height: 24px;
 }
 
-.icon-tel {
-    position: absolute;
-    top: 35px;
-    left: 19px;
-    transform-origin: 1;
-    z-index: 100;
-
-    width: 13px;
-    height: 13px;
+.form-input:focus,
+.coment-area:focus {
+    border: 1px solid #4D5AE5;
 }
 
-.icon-mail {
-    position: absolute;
-    top: 35px;
-    left: 19px;
-    transform-origin: 1;
-    z-index: 100;
-    width: 15px;
-    height: 12px;
+.form-input:focus+.form-icon {
+    color: #4D5AE5;
 }
 
 .checkbox {
-    flex-direction: row;
-    align-items: center;
     margin-bottom: 24px;
 }
 
+.checkbox-input {
+    position: relative;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    margin: 0;
+}
+
+
+
+.checkbox-input:checked+.icon-checkbox {
+    opacity: 1;
+}
+
+.icon-checkbox {
+    opacity: 0;
+    transition: opacity var(--time-animation-normal) var(--timing-function);
+}
+
+.icon-checkbox-done {
+    position: absolute;
+    /* left: 0; */
+}
+
+.icon-checkbox {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+}
+
 .checkbox label {
-    margin-left: 8px;
-    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.policy-text {
+
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.04em;
+
+    color: #757575;
 }
 
 .button.send {
-
+    width: 171px;
+    height: 51px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -1011,8 +1031,6 @@ body {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
-
-
-    /* transition: box-shadow var(--time-animation-normal) var(--timing-function) background-color var(--time-animation-normal) var(--timing-function); */
+    transition: box-shadow var(--time-animation-normal) var(--timing-function) background-color var(--time-animation-normal) var(--timing-function);
 
 }

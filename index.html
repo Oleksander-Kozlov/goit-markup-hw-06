@@ -400,7 +400,7 @@
         <p class="soc-description">Subscribe</p>
         <form class="subscribe-form" name="subscribe_form">
         <label for="mail"></label>
-        <input type="email" class="user-mail" name="user_mail" placeholder="E-mail">
+        <input type="email" class="subscribe-mail" name="user_mail" placeholder="E-mail">
         <button type="submit" class="subscribe-btn" method="post">Subscribe 
 
           <svg class="icon-subscribe">
@@ -424,41 +424,48 @@
           </svg>
         </button>
         <form class="form-order">
-          <h3 class="title-callback">Leave your contacts and we will call you back</h3>
-          <div class="form-field"> <label for="user_name">Name</label>
-          <input class="name" type="text" name="user_name" id="user_name">
-           <svg class="icon-name" >
-          <use href="./images/icons.svg#icon-user_name_form"></use>
-        </svg>
+          <strong class="title-callback">Leave your contacts and we will call you back</strong>
+          <div class="form-field"> 
+            <label for="user_name">Name</label>
+            <input class="form-input" class="name" type="text" name="user_name" id="user_name">
+            <svg class="form-icon icon-name" >
+            <use href="./images/icons.svg#icon-user_name_form">         
+             </use>
+            </svg>
       </div>
          
         <div class="form-field">
           <label for="tel">Phone</label>
-          <input type="tel" name="tel" id="tel">
-           <svg class="icon-tel" >
-          <use href="./images/icons.svg#icon-phone_form"></use>
+          <input class="form-input" type="tel" name="tel" id="tel" >
+           <svg class="form-icon icon-tel" >
+          <use class="phone" href="./images/icons.svg#icon-phone_form"></use>
         </svg></div>
          
         <div class="form-field"><label for="mail">E-mail</label>
-          <input type="mail" name="mail" id="mail">
-           <svg class="icon-mail" >
+          <input class="form-input" type="mail" name="user_mail" id="mail">
+           <svg class="form-icon icon-mail" >
           <use href="./images/icons.svg#icon-mail_form"></use>
         </svg></div>
         
         <div class="form-field comment"><label class="user_comment" for="user_comment"><span>Comment</span></label>
-        <textarea class="coment-area" name="user_comment" rows="7" placeholder="Text input"></textarea></div>
+        <textarea class="coment-area" name="user_coment" rows="7" placeholder="Text input"></textarea></div>
         
-        <div class="form-field checkbox">
-        <input id="checkbox" type="checkbox">
-        <label for="checkbox" class="accept">
-I accept the terms and conditions of the
-  <a href="#" class="private_policy">Privacy Policy</a>
+        <div class=" checkbox">
+        
+        <label class="checkbox-label">
+         <input class="checkbox-input" name="user_agreement" type="checkbox">
+         <svg class="icon-checkbox">
+            <use class="icon-checkbox-done" href="./images/icons.svg#icon-galo4ka"></use>
+          </svg>
+
+<span class="policy-text">I accept the terms and conditions of the 
+  <a href="#" class="policy-link">Privacy Policy</a></span>
          
         </label>
         </div>
-
-        <button class="button send">Send</button>
-
+<div class="form-field btn">
+        <button class="button send" type="submit">Send</button>
+ </div>
 
         
         </form>
